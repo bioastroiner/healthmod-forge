@@ -19,8 +19,9 @@
 
 package io.github.blueminecraftteam.healthmod.core.registries;
 
-import io.github.blueminecraftteam.healthmod.common.items.AntibioticsItem;
+import io.github.blueminecraftteam.healthmod.common.items.AntiBioticsItem;
 import io.github.blueminecraftteam.healthmod.common.items.BandAidItem;
+import io.github.blueminecraftteam.healthmod.common.items.FirstAidKitItem;
 import io.github.blueminecraftteam.healthmod.core.HealthMod;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -29,6 +30,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+//i hate how youve made the class like this, makes it too long irrrrrrrrrrrrrrrrrr -wide twat
 
 @SuppressWarnings("UNUSED")
 public class ItemRegistries {
@@ -63,7 +65,7 @@ public class ItemRegistries {
 
     public static final RegistryObject<Item> ANTIBIOTICS = ITEMS.register(
             "antibiotics",
-            () -> new AntibioticsItem(new Item.Properties().group(HealthMod.ITEM_GROUP).maxStackSize(16))
+            () -> new AntiBioticsItem(new Item.Properties().group(HealthMod.ITEM_GROUP).maxStackSize(16))
     );
 
     public static final RegistryObject<Item> BROCCOLI = ITEMS.register(
@@ -76,5 +78,12 @@ public class ItemRegistries {
                             .effect(() -> new EffectInstance(EffectRegistries.HEALTHY.get(), 60 * 20), 1F)
                             .build()))
     );
+
+    public static final RegistryObject<Item> FIRST_AID_KIT = ITEMS.register(
+            "first_aid_kit",
+            () -> new FirstAidKitItem(new Item.Properties()
+                    .group(HealthMod.ITEM_GROUP)
+                    .rarity(Rarity.UNCOMMON)
+            ));
 }
 
