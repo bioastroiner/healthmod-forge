@@ -17,10 +17,10 @@
  * along with HealthMod.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.github.blueminecraftteam.healthmod.common.entities;
+package io.github.blueminecraftteam.healthmod.entities;
 
 import com.google.common.collect.ImmutableMap;
-import io.github.blueminecraftteam.healthmod.core.registries.ItemRegistries;
+import io.github.blueminecraftteam.healthmod.registries.ItemRegistries;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.block.Block;

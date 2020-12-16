@@ -17,10 +17,10 @@
  * along with HealthMod.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.github.blueminecraftteam.healthmod.core.registries;
+package io.github.blueminecraftteam.healthmod.registries;
 
-import io.github.blueminecraftteam.healthmod.common.entities.DoctorNPCEntity;
-import io.github.blueminecraftteam.healthmod.core.HealthMod;
+import io.github.blueminecraftteam.healthmod.entities.DoctorNPCEntity;
+import io.github.blueminecraftteam.healthmod.HealthMod;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;

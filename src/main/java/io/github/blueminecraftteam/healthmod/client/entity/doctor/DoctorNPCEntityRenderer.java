@@ -19,18 +19,18 @@
 
 package io.github.blueminecraftteam.healthmod.client.entity.doctor;
 
-import io.github.blueminecraftteam.healthmod.common.entities.AbstractNPCEntity;
+import io.github.blueminecraftteam.healthmod.entities.DoctorNPCEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 
-public class DoctorNPCEntityRenderer extends MobRenderer<AbstractNPCEntity, DoctorNPCEntityModel> {
+public class DoctorNPCEntityRenderer extends MobRenderer<DoctorNPCEntity, DoctorNPCEntityModel> {
     public DoctorNPCEntityRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new DoctorNPCEntityModel(), 0.5F);
+        super(rendererManager, new DoctorNPCEntityModel(1.0f), 0.5F);
     }
 
     @Override
-    public ResourceLocation getEntityTexture(AbstractNPCEntity entity) {
-        return entity.getTexture();
+    public ResourceLocation getEntityTexture(DoctorNPCEntity entity) {
+        return new ResourceLocation("textures/entities/doctor");
     }
 }

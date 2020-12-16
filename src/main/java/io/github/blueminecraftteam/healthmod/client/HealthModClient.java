@@ -20,8 +20,8 @@
 package io.github.blueminecraftteam.healthmod.client;
 
 import io.github.blueminecraftteam.healthmod.client.entity.doctor.DoctorNPCEntityRenderer;
-import io.github.blueminecraftteam.healthmod.core.HealthMod;
-import io.github.blueminecraftteam.healthmod.core.registries.EntityRegistries;
+import io.github.blueminecraftteam.healthmod.HealthMod;
+import io.github.blueminecraftteam.healthmod.registries.EntityRegistries;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
