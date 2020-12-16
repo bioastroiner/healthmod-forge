@@ -26,9 +26,8 @@ import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.inventory.container.Container
 import net.minecraft.network.PacketBuffer
 import net.minecraft.util.IWorldPosCallable
-import java.util.Objects
 
-class BandAidBoxContainer(windowId: Int, playerInventory: PlayerInventory, val tileEntity: BandAidBoxTileEntity) :
+class BandAidBoxContainer(windowId: Int, playerInventory: PlayerInventory, tileEntity: BandAidBoxTileEntity) :
 	Container(ContainerRegistries.BAND_AID_BOX, windowId) {
 	private val callable: IWorldPosCallable
 	val slotSizePlus2 = 18
@@ -48,8 +47,6 @@ class BandAidBoxContainer(windowId: Int, playerInventory: PlayerInventory, val t
 
 	companion object {
 		private fun getTileEntity(playerInventory: PlayerInventory, data: PacketBuffer): BandAidBoxTileEntity {
-			Objects.requireNonNull(playerInventory, "PlayerInventory cannot be null")
-			Objects.requireNonNull(data, "PacketBuffer cannot be null")
 			val tileEntity = playerInventory.player.world.getTileEntity(data.readBlockPos())
 			if (tileEntity is BandAidBoxTileEntity) {
 				return tileEntity
