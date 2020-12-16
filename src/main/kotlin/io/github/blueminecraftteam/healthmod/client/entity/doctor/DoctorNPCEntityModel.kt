@@ -31,7 +31,7 @@ import kotlin.math.sin
 @OnlyIn(Dist.CLIENT)
 class DoctorNPCEntityModel : SegmentedModel<AbstractNPCEntity>(), IHasHead {
 	private val parts: ImmutableList<ModelRenderer>
-	var head: ModelRenderer
+	private var head: ModelRenderer
 	private var hood: ModelRenderer
 	private var body: ModelRenderer
 	private var rightArm: ModelRenderer
@@ -104,8 +104,7 @@ class DoctorNPCEntityModel : SegmentedModel<AbstractNPCEntity>(), IHasHead {
 		}
 
 		if (entityIn.isHandActive) {
-			rightArm.rotateAngleX = Math.toRadians(-90f + 5f * sin(ageInTicks.toDouble()))
-				.toFloat()
+			rightArm.rotateAngleX = Math.toRadians(-90f + 5f * sin(ageInTicks.toDouble())).toFloat()
 			leftArm.rotateAngleX = Math.toRadians(-90f + 5f * sin(ageInTicks.toDouble())).toFloat()
 		}
 	}
